@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker';
 import Table from "./components/Table";
 
 function App() {
-    const [people, setPeople] = useState(new Array(10000).fill(true).map(() => ({
+    const [people, setPeople] = useState(new Array(100000).fill(true).map(() => ({
         firstName: faker.name.firstName(),
         lastName: faker.name.lastName(),
         email: faker.internet.email()
