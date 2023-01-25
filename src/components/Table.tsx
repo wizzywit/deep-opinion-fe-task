@@ -1,4 +1,4 @@
-import {useState, UIEvent, useCallback, useRef} from "react";
+import React, { useState, UIEvent, useCallback, useRef } from "react";
 
 interface OwnProps {
     rowHeight?: number;
@@ -113,4 +113,4 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
     )
 }
 
-export default Table
+export default React.memo(Table)

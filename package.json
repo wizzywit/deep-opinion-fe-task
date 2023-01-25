@@ -1,12 +1,11 @@
 {
-  "homepage":"https://wizzywit.github.io/deep-opinion-fe-task/",
+  "homepage": "https://wizzywit.github.io/deep-opinion-fe-task/",
   "name": "deep-opinion-fe-task",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.27",
@@ -45,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "@types/faker": "^6.6.9"
+    "@faker-js/faker": "^7.6.0"
   }
 }
