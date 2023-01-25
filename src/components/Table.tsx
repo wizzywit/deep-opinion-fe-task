@@ -99,15 +99,15 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
                 }}>
                 {generateRows()}
                 </tbody>
-                {scroll.top !== 0 && (
-                    <tbody className="top-wrapper">
+                <tbody className="top-wrapper">
                     <tr>
                         <td>
-                            <button className="top-btn" onClick={scrollToTop}>Top</button>
+                            {scroll.top !== 0 && (
+                                <button className="top-btn" onClick={scrollToTop}>Top</button>
+                            )}
                         </td>
                     </tr>
-                    </tbody>
-                )}
+                </tbody>
             </table>
         </div>
     )
