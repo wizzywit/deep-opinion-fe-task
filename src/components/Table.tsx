@@ -1,4 +1,4 @@
-import {useState, UIEvent, useCallback} from "react";
+import {useState, UIEvent, useCallback, useRef} from "react";
 
 interface OwnProps {
     rowHeight?: number;
@@ -8,6 +8,7 @@ interface OwnProps {
 const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
     const columns = Object.keys(rows[0])
     const stateTableHeight = (rowHeight * rows.length)
+    const tableRef = useRef<HTMLTableElement>(null)
     const [scroll, setScroll] = useState({
         top: 0,
         index: 0,
@@ -67,6 +68,11 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
         ? stateTableHeight + 2
         : tableHeight
 
+    const scrollToTop = () => {
+        if(tableRef.current){
+            tableRef.current.scrollTo({top: 0, behavior: "smooth"})
+        }
+    }
 
     return (
         <div className={"wrapper"}>
@@ -81,7 +87,7 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
             </table>
             <table className='table-content' style={{
                 height: currentTableHeight
-            }} onScroll={onScroll}>
+            }} onScroll={onScroll} ref={tableRef}>
                 <tbody style={{
                     position: "relative",
                     display: 'inline-block',
@@ -93,6 +99,9 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
                 }}>
                 {generateRows()}
                 </tbody>
+                {scroll.top !== 0 && (
+                    <button className="top-btn" onClick={scrollToTop}>Top</button>
+                )}
             </table>
         </div>
     )

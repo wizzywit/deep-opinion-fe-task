@@ -45,6 +45,7 @@ table {
   overflow-x: hidden;
   border-collapse: collapse;
   display: block;
+  position: relative;
 }
 
 th {
@@ -82,4 +83,15 @@ th, td {
 .table-wrapper{
   width: 100%;
   padding: 20px;
+}
+
+.top-btn {
+  position: sticky;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+}
+
+.top-btn:hover{
+  cursor: pointer;
 }
