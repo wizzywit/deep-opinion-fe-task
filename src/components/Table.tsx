@@ -41,7 +41,7 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
             }
 
             items.push(
-                <tr className={`tr ctr ${(index % 2) === 0 ? 'tr-odd' : 'tr-even'}`} style={{
+                <tr className={`tr ctr ${(index % 2) === 0 ? 'tr-odd' : 'tr-even'}`} data-testid="item" style={{
                     position: "absolute",
                     top: (index * rowHeight),
                     left: 0,
@@ -87,7 +87,7 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
             </table>
             <table className='table-content' style={{
                 height: currentTableHeight
-            }} onScroll={onScroll} ref={tableRef}>
+            }} onScroll={onScroll} ref={tableRef} >
                 <tbody style={{
                     position: "relative",
                     display: 'inline-block',
