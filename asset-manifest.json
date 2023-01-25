@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/deep-opinion-fe-task/static/css/main.44ce7cda.css",
-    "main.js": "/deep-opinion-fe-task/static/js/main.2dd2983c.js",
+    "main.css": "/deep-opinion-fe-task/static/css/main.0882cae1.css",
+    "main.js": "/deep-opinion-fe-task/static/js/main.b1c7386f.js",
     "static/js/787.4fbc63d9.chunk.js": "/deep-opinion-fe-task/static/js/787.4fbc63d9.chunk.js",
     "index.html": "/deep-opinion-fe-task/index.html",
-    "main.44ce7cda.css.map": "/deep-opinion-fe-task/static/css/main.44ce7cda.css.map",
-    "main.2dd2983c.js.map": "/deep-opinion-fe-task/static/js/main.2dd2983c.js.map",
+    "main.0882cae1.css.map": "/deep-opinion-fe-task/static/css/main.0882cae1.css.map",
+    "main.b1c7386f.js.map": "/deep-opinion-fe-task/static/js/main.b1c7386f.js.map",
     "787.4fbc63d9.chunk.js.map": "/deep-opinion-fe-task/static/js/787.4fbc63d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44ce7cda.css",
-    "static/js/main.2dd2983c.js"
+    "static/css/main.0882cae1.css",
+    "static/js/main.b1c7386f.js"
   ]
 }
