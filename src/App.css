@@ -86,10 +86,12 @@ th, td {
 }
 
 .top-btn {
+  padding: 10px;
+}
+
+.top-wrapper {
   position: sticky;
   bottom: 10px;
-  right: 10px;
-  padding: 10px;
 }
 
 .top-btn:hover{

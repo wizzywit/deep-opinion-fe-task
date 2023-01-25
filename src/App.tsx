@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="container">
       <div className="header">
-        <h1>Virtualized list: {people.length}</h1>
+        <h1>Virtualized list: {people.length.toLocaleString()}</h1>
         <button className="btn" onClick={addItem}>Add new item</button>
       </div>
         <div className="table-wrapper">
