@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "paths": {
+      "faker/*": ["@faker-js/faker/*"],
+      "faker": ["@faker-js/faker"]
+    },
     "lib": [
       "dom",
       "dom.iterable",

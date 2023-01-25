@@ -1,11 +1,11 @@
 import {useState, UIEvent, useCallback} from "react";
 
 interface OwnProps {
-    rowHeight: number;
-    tableHeight: number;
+    rowHeight?: number;
+    tableHeight?: number;
     rows: {[key: string]: string}[]
 }
-const Table = ({rowHeight = 35, tableHeight = 200, rows}: OwnProps) => {
+const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
     const columns = Object.keys(rows[0])
     const stateTableHeight = (rowHeight * rows.length)
     const [scroll, setScroll] = useState({
@@ -40,13 +40,15 @@ const Table = ({rowHeight = 35, tableHeight = 200, rows}: OwnProps) => {
             }
 
             items.push(
-                <tr className={`tr ${(index % 2) === 0 ? 'tr-odd' : 'tr-even'}`} style={{
+                <tr className={`tr ctr ${(index % 2) === 0 ? 'tr-odd' : 'tr-even'}`} style={{
                     position: "absolute",
                     top: (index * rowHeight),
                     left: 0,
                     height: rowHeight,
-                    lineHeight: `${rowHeight}px`
+                    lineHeight: `${rowHeight}px`,
+                    maxHeight: `${rowHeight}px`
                 }} key={index}>
+                    {/* eslint-disable-next-line no-loop-func */}
                     {columns.map((column, i) =>
                         <td key={i}>
                             {rows[index][column]}
@@ -85,7 +87,9 @@ const Table = ({rowHeight = 35, tableHeight = 200, rows}: OwnProps) => {
                     display: 'inline-block',
                     height: stateTableHeight,
                     maxHeight: stateTableHeight,
-                    width: "100%"
+                    width: "100%",
+                    paddingRight: 2,
+                    paddingLeft: 2,
                 }}>
                 {generateRows()}
                 </tbody>

@@ -17,6 +17,23 @@
 
 .wrapper {
   display: inline-block;
+  width: 100%;
+}
+table {
+  width: 100%;
+}
+.ctr {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2px;
+  margin-left: 2px;
+  border-right: 1px solid black;
+}
+
+.ctr td{
+  width: calc(100% / 3);
+  border-right: 1px solid black;
 }
 
 .wrapper table {
@@ -25,6 +42,7 @@
 
 .table-content {
   overflow-y: scroll;
+  overflow-x: hidden;
   border-collapse: collapse;
   display: block;
 }
@@ -48,8 +66,9 @@ th, td {
 }
 
 .tr {
-  height: 35px;
+  height: 50px;
   max-height: 35px;
+  width: 100%;
 }
 
 .tr-odd {
@@ -58,4 +77,9 @@ th, td {
 
 .tr-even {
   background-color: #fcfcfc;
+}
+
+.table-wrapper{
+  width: 100%;
+  padding: 20px;
 }
