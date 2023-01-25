@@ -23,7 +23,7 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
         const newScroll = {
             index,
             end: index + Math.ceil((tableHeight * 2) / rowHeight),
-            top: (scrollTop / rowHeight) * rowHeight
+            top: scrollTop
         }
 
         setScroll(() => newScroll);
@@ -34,7 +34,7 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
         const end = scroll.end
         let items = []
 
-        do {
+        while (index < end) {
             if (index >= rows.length) {
                 index = rows.length
                 break
@@ -59,7 +59,7 @@ const Table = ({rowHeight = 50, tableHeight = 700, rows}: OwnProps) => {
             )
 
             index++
-        } while (index < end)
+        }
 
         return items
     },[columns, rowHeight, rows, scroll.end, scroll.index])
